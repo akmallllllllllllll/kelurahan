@@ -18,6 +18,8 @@
                 <small>Tanggal: {{ aduan.tanggal_lapor }}</small>
                 <p>{{ aduan.deskripsi }}</p>
             </li>
+            <a href="{% url 'pengaduan-edit' aduan.pk %}">Edit</a> | 
+            <a href="{% url 'pengaduan-hapus' aduan.pk %}">Hapus</a>
             <hr>
         {% empty %}
             <li>Belum ada data pengaduan yang tercatat.</li>
